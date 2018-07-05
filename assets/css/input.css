@@ -13,10 +13,47 @@
     display: inline-block;
     margin-right: 30px;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .acf-media-field-meadia-box .acf-media-field-grid-box img{
     width: 100%;
     border: 1px solid #ccc;
     padding: 3px;
+}
+
+.acf-media-field-meadia-box .acf-media-field-edit-platte{
+    position: absolute;
+    right: 0px;
+}
+
+.acf-media-field-meadia-box .acf-media-field-edit-platte ul{
+    list-style: none;
+    margin: 5px -6px 0px 0px;
+}
+
+.acf-media-field-meadia-box .acf-media-field-edit-platte ul li{
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.acf-media-field-meadia-box .acf-media-field-edit-platte ul li:last-child{
+    border: none;
+    padding-right: 5px;
+}
+
+.acf-media-field-meadia-box .acf-media-field-edit-platte ul li a{
+    text-decoration: none;
+    background: #EC3233;
+    color: #ffffff;
+    padding: 3px;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+}
+
+.acf-media-field-meadia-box .acf-media-field-edit-platte ul li a .dashicons{
+    font-size: 14px;
+    line-height: 26px;
 }
