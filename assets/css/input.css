@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+
+
+.acf-media-field-meadia-box .acf-media-field-grid-box{
+    width: 196px;
+    max-width: 196px;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.acf-media-field-meadia-box .acf-media-field-grid-box img{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 3px;
+}
