@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: ACF Media Field
+Plugin Name: ACF Media Gallery
 Plugin URI: PLUGIN_URL
 Description: SHORT_DESCRIPTION
 Version: 1.0.0
@@ -16,9 +16,9 @@ if( ! defined( 'ABSPATH' ) ) exit;
 
 
 // check if class already exists
-if( !class_exists('acf_plugin_media_field') ) :
+if( !class_exists('acf_media_gallery') ) :
 
-class acf_plugin_media_field {
+class acf_media_gallery {
 	
 	// vars
 	var $settings;
@@ -71,16 +71,15 @@ class acf_plugin_media_field {
 		// load textdomain
 		load_plugin_textdomain( 'TEXTDOMAIN', false, plugin_basename( dirname( __FILE__ ) ) . '/lang' ); 
 		
-		
 		// include
-		include_once('fields/class-acf-media-field-v4.php');
+		include_once('fields/acf_media_gallery_v5.php');
 	}
 	
 }
 
 
 // initialize
-new acf_plugin_media_field();
+new acf_media_gallery();
 
 
 // class_exists check

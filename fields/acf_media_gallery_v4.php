@@ -3,12 +3,11 @@
 // exit if accessed directly
 if( ! defined( 'ABSPATH' ) ) exit;
 
-
 // check if class already exists
-if( !class_exists('NAMESPACE_acf_field_FIELD_NAME') ) :
+if( !class_exists('acf_media_field_v4') ) :
 
 
-class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
+class acf_media_field_v4 extends acf_field {
 	
 	// vars
 	var $settings, // will hold info such as dir / path
@@ -93,7 +92,7 @@ class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
 		
 		
 		// register & include CSS
-		wp_register_style('TEXTDOMAIN', "{$url}assets/css/input.css", array('acf-input'), $version);
+		wp_register_style('TEXTDOMAIN', "{$url}assets/css/acf-media-gallery.css", array('acf-media-gallery'), $version);
 		wp_enqueue_style('TEXTDOMAIN');
 		
 	}
@@ -307,7 +306,7 @@ class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
 
 
 // initialize
-new NAMESPACE_acf_field_FIELD_NAME( $this->settings );
+new acf_media_field_v4( $this->settings );
 
 
 // class_exists check

@@ -5,10 +5,10 @@ if( ! defined( 'ABSPATH' ) ) exit;
 
 
 // check if class already exists
-if( !class_exists('NAMESPACE_acf_field_FIELD_NAME') ) :
+if( !class_exists('acf_media_gallery_v5') ) :
 
 
-class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
+class acf_media_gallery_v5 extends acf_field {
 	
 	
 	/*
@@ -30,21 +30,21 @@ class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
 		*  name (string) Single word, no spaces. Underscores allowed
 		*/
 		
-		$this->name = 'FIELD_NAME';
+		$this->name = 'acf_media_gallery';
 		
 		
 		/*
 		*  label (string) Multiple words, can include spaces, visible when selecting a field type
 		*/
 		
-		$this->label = __('FIELD_LABEL', 'TEXTDOMAIN');
+		$this->label = __('Media Gallery', 'TEXTDOMAIN');
 		
 		
 		/*
 		*  category (string) basic | content | choice | relational | jquery | layout | CUSTOM GROUP NAME
 		*/
 		
-		$this->category = 'basic';
+		$this->category = 'content';
 		
 		
 		/*
@@ -132,25 +132,7 @@ class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
 	*/
 	
 	function render_field( $field ) {
-		
-		
-		/*
-		*  Review the data of $field.
-		*  This will show what data is available
-		*/
-		
-		echo '<pre>';
-			print_r( $field );
-		echo '</pre>';
-		
-		
-		/*
-		*  Create a simple text input using the 'font_size' setting.
-		*/
-		
-		?>
-		<input type="text" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" />
-		<?php
+		require_once( dirname(__FILE__) . '/includes/v5/render_field.php');
 	}
 	
 		
@@ -167,8 +149,6 @@ class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
 	*  @param	n/a
 	*  @return	n/a
 	*/
-
-	/*
 	
 	function input_admin_enqueue_scripts() {
 		
@@ -176,19 +156,15 @@ class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
 		$url = $this->settings['url'];
 		$version = $this->settings['version'];
 		
-		
 		// register & include JS
-		wp_register_script('TEXTDOMAIN', "{$url}assets/js/input.js", array('acf-input'), $version);
-		wp_enqueue_script('TEXTDOMAIN');
-		
+		wp_register_script('ACF_MEDIA_GALLERY', "{$url}assets/js/acf-media-gallery.js", array('acf-input'), $version);
+		wp_enqueue_script('ACF_MEDIA_GALLERY');
 		
 		// register & include CSS
-		wp_register_style('TEXTDOMAIN', "{$url}assets/css/input.css", array('acf-input'), $version);
-		wp_enqueue_style('TEXTDOMAIN');
+		wp_register_style('ACF_MEDIA_GALLERY', "{$url}assets/css/acf-media-gallery.css", array('acf-input'), $version);
+		wp_enqueue_style('ACF_MEDIA_GALLERY');
 		
 	}
-	
-	*/
 	
 	
 	/*
@@ -557,7 +533,7 @@ class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
 
 
 // initialize
-new NAMESPACE_acf_field_FIELD_NAME( $this->settings );
+new acf_media_gallery_v5( $this->settings );
 
 
 // class_exists check

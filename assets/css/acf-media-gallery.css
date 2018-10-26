@@ -1,0 +1,77 @@
+
+
+.acf-media-gallery-wrapper ul{
+    margin-top: 25px;
+}
+
+.acf-media-gallery-wrapper ul li{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.acf-media-gallery-wrapper ul li:first-child{
+    margin-left: 0px;
+}
+
+.acf-media-gallery-wrapper ul li.acf-media-gallery-add-new,
+.acf-media-gallery-wrapper ul li.acf-media-gallery-container{
+    width: 180px;
+    height: 180px;;
+    padding: 3px;
+}
+
+.acf-media-gallery-wrapper ul li.acf-media-gallery-add-new{
+    border: 1px dashed #ccc;
+}
+
+.acf-media-gallery-wrapper ul li.acf-media-gallery-container{
+    border: 1px solid #ccc;
+}
+
+.acf-media-gallery-wrapper ul li a{
+    text-decoration: none;
+    display: inline-block;
+    background: #cccccc;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.acf-media-gallery-wrapper ul li a .dashicons-plus-alt{
+    font-size: 58px;
+    color: #333;
+    height: 100%;
+    width: 100%;
+    line-height: 180px;;
+}
+
+.acf-media-gallery-wrapper ul li.acf-media-gallery-container img{
+    height: 100%;
+    width: 100%;
+}
+
+.acf-media-gallery-wrapper ul li.acf-media-gallery-container .hoverboard{
+    display: none;
+}
+
+.acf-media-gallery-wrapper ul li.acf-media-gallery-container:hover .hoverboard{
+    display: block;
+}
+
+.acf-media-gallery-wrapper ul li.acf-media-gallery-container .hoverboard{
+    position: absolute;
+    z-index: 9999;
+    background: rgb(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    line-height: 140px;
+    text-align: center;
+}
+
+.acf-media-gallery-wrapper ul li.acf-media-gallery-container:hover .hoverboard .dashicons-admin-generic{
+    font-size: 48px;
+    vertical-align: middle;
+}
